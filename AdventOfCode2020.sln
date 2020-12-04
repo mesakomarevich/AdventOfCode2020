@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventOfCode2020", "AdventOfCode2020\AdventOfCode2020.csproj", "{1370BE68-F83F-46FD-9A5E-74D6EBCEAE4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day1", "Day1\Day1.csproj", "{EA427EE0-FFEA-4B71-BEDC-D618DB9236A9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1370BE68-F83F-46FD-9A5E-74D6EBCEAE4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1370BE68-F83F-46FD-9A5E-74D6EBCEAE4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1370BE68-F83F-46FD-9A5E-74D6EBCEAE4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1370BE68-F83F-46FD-9A5E-74D6EBCEAE4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA427EE0-FFEA-4B71-BEDC-D618DB9236A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA427EE0-FFEA-4B71-BEDC-D618DB9236A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA427EE0-FFEA-4B71-BEDC-D618DB9236A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA427EE0-FFEA-4B71-BEDC-D618DB9236A9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
