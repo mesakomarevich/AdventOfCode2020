@@ -18,7 +18,7 @@ namespace Day4
 
         static void Part1(string[] passports)
         {
-            Console.WriteLine(passports.Count(x => Passport.TryParse(x, out var _)));
+            Console.WriteLine(passports.Count(x => Passport.TryParse(x)));
         }
 
         static void Part2(string[] passports)
@@ -29,15 +29,6 @@ namespace Day4
 
     class Passport
     {
-        public string byr { get; set; }
-        public string iyr { get; set; }
-        public string eyr { get; set; }
-        public string hgt { get; set; }
-        public string hcl { get; set; }
-        public string ecl { get; set; }
-        public string pid { get; set; }
-        public string cid { get; set; }
-
         public static bool Validate(string value)
         {
             var valid = false;
@@ -74,34 +65,23 @@ namespace Day4
             }
 
             return valid;
-
-            void Fail(string prop)
-            {
-                Console.WriteLine($"bad {prop}: {args[prop]}");
-                valid = false;
-            }
         }
-
-        public static bool TryParse(string value, out Passport passport)
+        
+        public static bool TryParse(string value)
         {
-            passport = null;
-            var pp = new Passport();
             var args = value.Split(new[] { '\n', ' ' }, StringSplitOptions.RemoveEmptyEntries)
                 .Select(x => x.Split(":", StringSplitOptions.RemoveEmptyEntries))
                 .ToDictionary(x => x[0], x => x[1]);
 
             try
             {
-                pp.byr = args["byr"];
-                pp.iyr = args["iyr"];
-                pp.eyr = args["eyr"];
-                pp.hgt = args["hgt"];
-                pp.hcl = args["hcl"];
-                pp.ecl = args["ecl"];
-                pp.pid = args["pid"];
-                pp.cid = args.TryGetValue("cid", out var cid) ? cid : default;
-                passport = pp;
-                return true;
+                return args.ContainsKey("byr") &&
+                       args.ContainsKey("iyr") &&
+                       args.ContainsKey("eyr") &&
+                       args.ContainsKey("hgt") &&
+                       args.ContainsKey("hcl") &&
+                       args.ContainsKey("ecl") &&
+                       args.ContainsKey("pid");
             }
             catch (Exception e)
             {
