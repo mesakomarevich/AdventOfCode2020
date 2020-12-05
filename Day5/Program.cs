@@ -57,7 +57,6 @@ namespace Day5
         static int FindColumn(string pass)
         {
             var dirs = pass.Substring(7);
-
             var upper = 7;
             var lower = 0;
 
