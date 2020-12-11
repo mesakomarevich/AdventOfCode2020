@@ -11,7 +11,8 @@ namespace Day4
     {
         static async Task Main(string[] args)
         {
-            var passports = (await File.ReadAllTextAsync("input.txt")).Split("\n\n", StringSplitOptions.RemoveEmptyEntries).Select(x => x.Replace("\n", " ")).ToArray();
+            var passports = (await File.ReadAllTextAsync("input.txt")).Split("\n\n", StringSplitOptions.RemoveEmptyEntries)
+                .Select(x => x.Replace("\n", " ")).ToArray();
             Part1(passports);
             Part2(passports);
         }
@@ -66,7 +67,7 @@ namespace Day4
 
             return valid;
         }
-        
+
         public static bool TryParse(string value)
         {
             var args = value.Split(new[] { '\n', ' ' }, StringSplitOptions.RemoveEmptyEntries)
